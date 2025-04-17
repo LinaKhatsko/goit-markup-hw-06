@@ -274,7 +274,22 @@ img {
     padding: 0;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+.modal-close-btn:active {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:active .modal-close-icon {
+    fill: #FFFFFF;
+}
 
 .mobile-nav {
     margin-bottom: auto;
@@ -299,10 +314,6 @@ img {
 }
 
 .mobile-nav-link.current {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11111;
-    letter-spacing: 0.02em;
     color: #404bbf;
 }
 
@@ -329,8 +340,10 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mob-contacts-link:active,
 .mob-contacts-link.current {
     color: #4d5ae5;
 }
@@ -343,7 +356,6 @@ img {
 
 .mobile-soc-icon {
     fill: #f4f4fd;
-    display: block;
 }
 
 .social-item {
@@ -362,12 +374,14 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-link:active {
+    background-color: #404bbf;
+}
+
 @media screen and (min-width: 768px) {
     .mobile-menu {
         display: none;
     }
-
-
 }
 
 /* hero */
@@ -375,10 +389,105 @@ img {
 .hero {
     background-color: #2e2f42;
     padding: 72px 0;
-    max-width: 1440px;
+    max-width: 320px;
     margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office/people-office-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office/people-office-mobile@2x.jpg);
+    }
+}
+
+.hero-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 216px;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+.hero-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background-color: #4d5ae5;
+    border-radius: 4px;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    display: block;
+    margin: 72px auto 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:active {
+    background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding: 112px 0;
+        max-width: 768px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office/people-office-tablet.jpg);
+        }
+    
+    @media (min-resolution: 192dpi) {
+        .hero {
+            background-image:
+                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                    url(../images/people-office/people-office-tablet@2x.jpg);
+            }
+        }
+    
+    .hero-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+    }
+    
+    .hero-btn {
+        margin: 36px auto 0 auto;
+    }
+
+}
+
+@media screen and (min-width: 1158px) {
+    .hero {
+            padding: 188px 0;
+            max-width: 1440px;
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office/people-office.jpg);
+        }
+    
+        @media (min-resolution: 192dpi) {
+            .hero {
+                background-image:
+                    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                    url(../images/people-office/people-office@2x.jpg);
+            }
+        }
+    
+        .hero-title {
+            font-size: 56px;
+            line-height: 1.07;
+            max-width: 496px;
+        }
+    
+        .hero-btn {
+            margin: 48px auto 0 auto;
+        }
+}
+
+/* features */
+
