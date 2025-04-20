@@ -544,7 +544,7 @@ img {
 @media screen and (min-width: 768px) {
 
     .container {
-        width: 768px;
+        max-width: 768px;
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -554,8 +554,6 @@ img {
     }
 
     .features-item {
-        width: 356px;
-        height: 120px;
         flex-basis: calc((100% - 24px) / 2);
     }
 
@@ -566,7 +564,7 @@ img {
 
 @media screen and (min-width: 1158px) {
     .container {
-        width: 1158px;
+        max-width: 1158px;
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -589,7 +587,6 @@ img {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 264px;
         height: 112px;
         border: 1px solid #8e8f99;
         border-radius: 4px;
@@ -849,7 +846,6 @@ img {
     background-color: #2e2f42;
     padding-top: 96px;
     padding-bottom: 96px;
-    max-width: 320px;
     margin: 0 auto;
 }
 
@@ -970,10 +966,7 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-    .footer {
-        max-width: 768px;
-    }
-
+    
     .footer-text {
         width: 264px;
     }
@@ -1239,6 +1232,7 @@ img {
         }
     
         .custom-checkbox {
+            flex-shrink: 0;
             width: 16px;
             height: 16px;
             border-radius: 2px;
